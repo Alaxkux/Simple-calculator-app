@@ -1,0 +1,139 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: white;
+    transition: background 0.3s, color 0.3s;
+}
+
+#calculator-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Theme selector */
+#theme-select {
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+/* Calculator */
+#calculator {
+    background-color: #1e1e1e;
+    border-radius: 25px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 25px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+    width: 500px;
+}
+
+/* Display */
+#display {
+    grid-column: span 2;
+    width: 100%;
+    font-size: 2.3rem;
+    padding: 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2c2c2c;
+    color: white;
+    text-align: right;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+#keys button {
+    width: 100%;
+    height: 70px;
+    font-size: 1.6rem;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: #3a3a3a;
+    color: white;
+    transition: 0.2s;
+}
+
+#keys button:active {
+    transform: scale(0.94);
+}
+
+/* Operators - yellow */
+#keys button:nth-child(4),
+#keys button:nth-child(8),
+#keys button:nth-child(12),
+#keys button:nth-child(16),
+#keys button:nth-child(20) {
+    background-color: #f1c40f;
+    color: black;
+    font-weight: bold;
+}
+
+/* Equal */
+#keys button:nth-child(19) {
+    background-color: #f39c12;
+    color: black;
+    font-weight: bold;
+}
+
+/* History */
+#history-panel {
+    background-color: #2c2c2c;
+    padding: 20px;
+    border-radius: 20px;
+    max-height: 380px;
+    overflow-y: auto;
+}
+
+#history-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#history-list div {
+    padding: 6px 0;
+    border-bottom: 1px solid #444;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Themes */
+body.light { background-color: #f0f0f0; color: #000; }
+body.light #calculator { background-color: #fff; }
+body.light #display { background-color: #e0e0e0; color: #000; }
+body.light #keys button { background-color: #ddd; color: #000; }
+body.light #history-panel { background-color: #e0e0e0; color: #000; }
+
+body.blue { background-color: #001f3f; color: #fff; }
+body.blue #calculator { background-color: #003366; }
+body.blue #display { background-color: #004080; color: #fff; }
+body.blue #keys button { background-color: #0059b3; color: #fff; }
+body.blue #history-panel { background-color: #004080; color: #fff; }
+
+body.neon { background-color: #0f0f0f; color: #0f0; }
+body.neon #calculator { background-color: #111; }
+body.neon #display { background-color: #222; color: #0f0; }
+body.neon #keys button { background-color: #333; color: #0f0; }
+body.neon #history-panel { background-color: #222; color: #0f0; }
+
+body.minimal { background-color: #fdfdfd; color: #000; }
+body.minimal #calculator { background-color: #fff; }
+body.minimal #display { background-color: #f7f7f7; color: #000; }
+body.minimal #keys button { background-color: #eee; color: #000; }
+body.minimal #history-panel { background-color: #f7f7f7; color: #000; }
