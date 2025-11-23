@@ -48,6 +48,13 @@ body {
     text-align: right;
     box-sizing: border-box;
 }
+#clear-history{
+    margin-left: 10px;
+    border: none;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #f1c40f;
+}
 
 /* Buttons */
 #keys {
@@ -96,14 +103,16 @@ body {
     padding: 20px;
     border-radius: 20px;
     max-height: 380px;
-    overflow-y: auto;
 }
+
 
 #history-controls {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 10px;
+    margin-top: -15px;
+    
 }
 
 #history-list div {
